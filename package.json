@@ -9,9 +9,10 @@
     "lint": "eslint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "vitest --run",
-    "test:ci": "vitest --run --environment node",
-    "test:watch": "vitest"
+    "test": "vitest",
+    "test:ci": "vitest --run",
+    "test:watch": "vitest",
+    "test:storybook": "vitest --config vitest.storybook.config.ts --run"
   },
   "dependencies": {
     "next": "16.0.1",
@@ -36,6 +37,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.0.1",
     "eslint-plugin-storybook": "^10.0.5",
+    "jsdom": "^27.1.0",
     "playwright": "^1.56.1",
     "storybook": "^10.0.5",
     "tailwindcss": "^4",
