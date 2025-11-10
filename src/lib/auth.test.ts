@@ -16,6 +16,7 @@ describe("Authentication - BetterAuth", function () {
     });
 
     beforeEach(async () => {
+        // @ts-expect-error
         await db.account?.deleteMany();
         await db.verification?.deleteMany();
         await db.session?.deleteMany();

@@ -47,3 +47,5 @@ storybook-static
 .idea
 
 /src/generated/prisma
+
+prisma/test.db
