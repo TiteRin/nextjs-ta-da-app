@@ -1,6 +1,6 @@
-import {describe, it, expect, afterAll, beforeAll, beforeEach, afterEach} from 'vitest';
+import {describe, it, expect, afterAll, beforeAll, beforeEach} from 'vitest';
 import {auth} from './auth';
-import {PrismaClient} from '@prisma/client';
+import {PrismaClient} from '@/generated/prisma/client';
 import {APIError} from "better-auth";
 
 let db: PrismaClient;
@@ -16,7 +16,6 @@ describe("Authentication - BetterAuth", function () {
     });
 
     beforeEach(async () => {
-        // @ts-expect-error
         await db.account?.deleteMany();
         await db.verification?.deleteMany();
         await db.session?.deleteMany();
